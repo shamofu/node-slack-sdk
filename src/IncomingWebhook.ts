@@ -35,7 +35,7 @@ export class IncomingWebhook {
    */
   private defaults: IncomingWebhookDefaultArguments;
 
-  constructor(url: string, defaults: IncomingWebhookDefaultArguments) {
+  constructor(url: string, defaults: IncomingWebhookDefaultArguments = {}) {
     if (url === undefined) {
       throw new Error('Incoming webhook URL is required');
     }
